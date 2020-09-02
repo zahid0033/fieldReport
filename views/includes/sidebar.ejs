@@ -1,0 +1,312 @@
+  <!-- Sidebar -->
+  <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <div class="sidebar-brand-icon rotate-n-15">
+        
+      </div>
+      <div class="sidebar-brand-text mx-3"><%= locals.type %> Admin </div>
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+
+
+  <% if(locals.type === "pd"){%>
+            <!-- Divider -->
+          <hr class="sidebar-divider">
+
+
+          <!-- PD Dashboard -->
+           <!-- Heading -->
+           <div class="sidebar-heading">
+            Information-SAO
+          </div>
+
+          <!-- Divider -->
+          <hr class="sidebar-divider">
+
+          <!-- Heading -->
+          <div class="sidebar-heading">
+            Trial Report-SAO
+          </div>
+
+          <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item">
+            <a class="nav-link" href="/pd/initialtrial" >
+              <i class="fas fa-fw fa-folder"></i>
+              <span>Initial Trial Report-SAO</span>
+            </a>
+          </li>
+
+
+
+          <!-- Nav Item - Tables -->
+          <li class="nav-item">
+            <a class="nav-link" href="/pd/finaltrial">
+              <i class="fas fa-fw fa-table"></i>
+              <span>Final Trial Report-SAO</span></a>
+          </li>
+
+          <!-- Sidebar Toggler (Sidebar) -->
+          <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+          </div>
+        <!-- End of Sidebar -->
+  <% }else if(locals.type === "ad"){ %>
+       <!-- Heading -->
+        <div class="sidebar-heading">
+          Information
+        </div>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link" href="/table">-->
+<!--            <i class="fas fa-fw fa-cog"></i>-->
+<!--            <span>Farmer's Information</span>-->
+<!--          </a>-->
+<!--        </li>-->
+
+
+          <!-- Divider -->
+          <hr class="sidebar-divider">
+
+          <!-- Heading -->
+          <div class="sidebar-heading">
+              প্রদর্শনীর প্রতিবেদন
+          </div>
+
+          <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item">
+              <a class="nav-link" href="/ad/trainedfarmer" >
+                  <i class="fas fa-fw fa-folder"></i>
+                  <span>প্রশিক্ষণপ্রাপ্ত কৃষকের তথ্য</span>
+              </a>
+          </li>
+
+          <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item">
+              <a class="nav-link" href="#" >
+                  <i class="fas fa-fw fa-folder"></i>
+                  <span>প্রদর্শনীর প্রাথমিক প্রতিবেদন</span>
+              </a>
+          </li>
+          <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item">
+              <a class="nav-link" href="#" >
+                  <i class="fas fa-fw fa-folder"></i>
+                  <span>প্রদরশনীর অগ্রগতির প্রতিবেদন</span>
+              </a>
+          </li>
+
+
+
+          <!-- Nav Item - Tables -->
+          <li class="nav-item">
+              <a class="nav-link" href="#">
+                  <i class="fas fa-fw fa-table"></i>
+                  <span>প্রদর্শনীর চূড়ান্ত প্রতিবেদন</span></a>
+          </li>
+
+          <!-- Heading -->
+          <div class="sidebar-heading">
+              প্রকল্প এলাকার সম্প্রসারণ
+          </div>
+
+          <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item">
+              <a class="nav-link" href="#" >
+                  <i class="fas fa-fw fa-folder"></i>
+                  <span>প্রকল্প এলাকার ফসলের জাত সম্প্রসারণ</span>
+              </a>
+          </li>
+
+          <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item">
+              <a class="nav-link" href="#" >
+                  <i class="fas fa-fw fa-folder"></i>
+                  <span>প্রকল্প এলাকায় প্রযুক্তি সম্প্রসারণ</span>
+              </a>
+          </li>
+          <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item">
+              <a class="nav-link" href="#" >
+                  <i class="fas fa-fw fa-folder"></i>
+                  <span>প্রকল্প এলাকার ফসল আবাদ অগ্রগতি</span>
+              </a>
+          </li>
+
+          <!-- Divider -->
+          <hr class="sidebar-divider d-none d-md-block">
+
+      <% }else if(locals.type === "dd"){ %>
+          <!-- Heading -->
+          <div class="sidebar-heading">
+              Information
+          </div>
+
+          <!-- Nav Item - Pages Collapse Menu -->
+          <!--        <li class="nav-item">-->
+          <!--          <a class="nav-link" href="/table">-->
+          <!--            <i class="fas fa-fw fa-cog"></i>-->
+          <!--            <span>Farmer's Information</span>-->
+          <!--          </a>-->
+          <!--        </li>-->
+
+
+          <!-- Divider -->
+          <hr class="sidebar-divider">
+
+          <!-- Heading -->
+          <div class="sidebar-heading">
+              প্রদর্শনীর প্রতিবেদন
+          </div>
+
+          <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item">
+              <a class="nav-link" href="/dd/trainedfarmer" >
+                  <i class="fas fa-fw fa-folder"></i>
+                  <span>প্রশিক্ষণপ্রাপ্ত কৃষকের তথ্য</span>
+              </a>
+          </li>
+
+          <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item">
+              <a class="nav-link" href="#" >
+                  <i class="fas fa-fw fa-folder"></i>
+                  <span>প্রদর্শনীর প্রাথমিক প্রতিবেদন</span>
+              </a>
+          </li>
+          <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item">
+              <a class="nav-link" href="#" >
+                  <i class="fas fa-fw fa-folder"></i>
+                  <span>প্রদরশনীর অগ্রগতির প্রতিবেদন</span>
+              </a>
+          </li>
+
+
+
+          <!-- Nav Item - Tables -->
+          <li class="nav-item">
+              <a class="nav-link" href="#">
+                  <i class="fas fa-fw fa-table"></i>
+                  <span>প্রদর্শনীর চূড়ান্ত প্রতিবেদন</span></a>
+          </li>
+
+          <!-- Heading -->
+          <div class="sidebar-heading">
+              প্রকল্প এলাকার সম্প্রসারণ
+          </div>
+
+          <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item">
+              <a class="nav-link" href="#" >
+                  <i class="fas fa-fw fa-folder"></i>
+                  <span>প্রকল্প এলাকার ফসলের জাত সম্প্রসারণ</span>
+              </a>
+          </li>
+
+          <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item">
+              <a class="nav-link" href="#" >
+                  <i class="fas fa-fw fa-folder"></i>
+                  <span>প্রকল্প এলাকায় প্রযুক্তি সম্প্রসারণ</span>
+              </a>
+          </li>
+          <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item">
+              <a class="nav-link" href="#" >
+                  <i class="fas fa-fw fa-folder"></i>
+                  <span>প্রকল্প এলাকার ফসল আবাদ অগ্রগতি</span>
+              </a>
+          </li>
+
+          <!-- Divider -->
+          <hr class="sidebar-divider d-none d-md-block">
+
+  <% } else if(locals.type === "upazilla"){   %>
+
+          <!-- Divider -->
+          <hr class="sidebar-divider">
+
+          <!-- Heading -->
+          <div class="sidebar-heading">
+            প্রদর্শনীর প্রতিবেদন
+          </div>
+
+          <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item">
+            <a class="nav-link" href="/upazilla/upazillatrainedfarmer" >
+                <i class="fas fa-fw fa-folder"></i>
+                <span>প্রশিক্ষণপ্রাপ্ত কৃষকের তথ্য</span>
+            </a>
+        </li>
+
+          <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item">
+              <a class="nav-link" href="/upazilla/upazillainitialtrial" >
+                  <i class="fas fa-fw fa-folder"></i>
+                  <span>প্রদর্শনীর প্রাথমিক প্রতিবেদন</span>
+              </a>
+          </li>
+          <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item">
+            <a class="nav-link" href="/upazilla/upazillaTrialProgress" >
+                <i class="fas fa-fw fa-folder"></i>
+                <span>প্রদরশনীর অগ্রগতির প্রতিবেদন</span>
+            </a>
+        </li>
+
+
+
+          <!-- Nav Item - Tables -->
+          <li class="nav-item">
+              <a class="nav-link" href="/upazilla/upazillafinaltrial">
+                  <i class="fas fa-fw fa-table"></i>
+                  <span>প্রদর্শনীর চূড়ান্ত প্রতিবেদন</span></a>
+          </li>
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+              প্রকল্প এলাকার সম্প্রসারণ
+          </div>
+
+          <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item">
+            <a class="nav-link" href="/upazilla/upazillaBreedExpansion" >
+                <i class="fas fa-fw fa-folder"></i>
+                <span>প্রকল্প এলাকার ফসলের জাত সম্প্রসারণ</span>
+            </a>
+        </li>
+
+          <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item">
+              <a class="nav-link" href="/upazilla/upazillaTechnologyExpansion" >
+                  <i class="fas fa-fw fa-folder"></i>
+                  <span>প্রকল্প এলাকায় প্রযুক্তি সম্প্রসারণ</span>
+              </a>
+          </li>
+          <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item">
+            <a class="nav-link" href="/upazilla/upazillaCropExpansion" >
+                <i class="fas fa-fw fa-folder"></i>
+                <span>প্রকল্প এলাকার ফসল আবাদ অগ্রগতি</span>
+            </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/upazilla/saoList" >
+                  <i class="fas fa-fw fa-folder"></i>
+                  <span>SAO</span>
+              </a>
+          </li>
+
+          <!-- Divider -->
+          <hr class="sidebar-divider d-none d-md-block">
+
+  <% }   %>
+</ul>
+
+    

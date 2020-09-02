@@ -1,0 +1,59 @@
+<%if (records.length >0){ %>
+    <table class="table table-bordered table-striped" id="tblCustomers" cellspacing="0" cellpadding="0">
+        <thead>
+        <tr>
+            <th>কৃষকের নাম</th>
+            <th>পিতার নাম</th>
+            <th>গ্রামের/মাঠের নাম</th>
+            <th>কৃষকের এনআইডি নং </th>
+            <th>কৃষকের মোবাইল নং</th>
+            <th>ব্লকের নাম</th>
+            <th>প্রদরশনীর নাম</th>
+            <th>প্রশিক্ষণের বিষয়</th>
+            <th>প্রশিক্ষণের তারিখ</th>
+            <th>সরবারহকৃত উপকরণের তালিকা(পরিমাণসহ)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% records.forEach(function(row){ %>
+            <tr>
+                <td><%= row.name %></td>
+                <td><%= row.fname %></td>
+                <td><%= row.vname %></td>
+                <td><%= row.nid %></td>
+                <td><%= row.mnum %></td>
+                <td><%= row.block %></td>
+                <td><%= row.tname %></td>
+                <td><%= row.topic %></td>
+                <td><%= row.date %></td>
+                <td><%= row.products %></td>
+
+            </tr>
+        <% }) %>
+        </tbody>
+    </table>
+<% }else{ %>
+    <table class="table table-bordered table-striped" id="tblCustomers" cellspacing="0" cellpadding="0">
+        <thead>
+        <tr>
+            <th>কৃষকের নাম</th>
+            <th>পিতার নাম</th>
+            <th>গ্রামের/মাঠের নাম</th>
+            <th>কৃষকের এনআইডি নং </th>
+            <th>কৃষকের মোবাইল নং</th>
+            <th>ব্লকের নাম</th>
+            <th>প্রদরশনীর নাম</th>
+            <th>প্রশিক্ষণের বিষয়</th>
+            <th>প্রশিক্ষণের তারিখ</th>
+            <th>সরবারহকৃত উপকরণের তালিকা(পরিমাণসহ)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% records.forEach(function(row){ %>
+            <tr>
+                <td colspan="10">No data Found</td>
+            </tr>
+        <% }) %>
+        </tbody>
+    </table>
+<% } %>

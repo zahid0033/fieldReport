@@ -1,0 +1,87 @@
+<%- include('../../includes/header')-%>
+<%- include('../../includes/sidebar')-%>
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+        <%- include('../../includes/topbar')-%>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div id="signupbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <div class="panel-title">প্রকল্প এলাকায় প্রযুক্তি সম্প্রসারণ</div> 
+                                <p><%
+                                if(success !=''){ %>
+                                <%= success %>
+                                    <% } %>
+                                </p>
+                                </div>  
+                            <div class="panel-body" >
+                                <form action="/upazilla/upazillaTechnologyExpansionForms" id="FieldTrialForm" class="form-horizontal" method="post"  role="form">
+                                    <div id="signupalert" style="display:none" class="alert alert-danger">
+                                        <p>Error:</p>
+                                        <span></span>
+                                    </div>
+
+                                        
+                                    <div class="form-group">
+                                        <label for="name" class="col-md-3 control-label">প্রযুক্তির নাম</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="name" placeholder="প্রযুক্তির নাম">
+                                        </div>
+                                    </div>
+
+                                    
+                                    
+                                    <div class="form-group">
+                                        <label for="user" class="col-md-3 control-label">ব্যবহারকারীর সংখ্যা</label>
+                                        
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="user" placeholder="ব্যবহারকারীর সংখ্যা">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="area" class="col-md-3 control-label">ব্যবহৃত জমি</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="area" placeholder="ব্যবহৃত জমি">
+                                        </div>
+                                    </div>
+
+                                   
+                                    
+                                    <div class="form-group">
+                                        <label for="year" class="col-md-3 control-label">বছর</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="year" placeholder="বছর">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="year" class="col-md-3 control-label">userid</label>
+                                        <div class="col-md-9">
+                                            <input type="number" class="form-control" name="user_id" placeholder="id" value="<%= user_id %>">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <!-- Button -->                                        
+                                        <div class="col-md-offset-3 col-md-9">
+                                        <input type="submit" name="submit" value="submit" class="btn btn-primary">   
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                        
+                                    
+                                </form>
+                            </div>
+                        </div>
+
+                
+                
+                    
+            </div> 
+                
+            </div>
+            <%- include('../../includes/footer')-%>
